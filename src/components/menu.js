@@ -18,7 +18,7 @@ const Menu=()=>{
             <li><Link to="/antwerp">Antwerp</Link></li>
             <li><Link to="/dusseldorf">Dusseldorf</Link></li>
             <li><Link to="/cologne">Cologne</Link></li>
-            <li><Link to="/blog">Blog</Link></li>
+            
         
         </ul>
             
