@@ -7,13 +7,24 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `@sekmet/gatsby-source-cloudinary`,
+      options: {
+        cloudName: 'martinez',
+        apiKey: '376187389972773',
+        apiSecret: 'q5zNkqA2cByuhhVzL-g8qLuFbUY',
+        type: `upload`,
+        resourceType: `image`,
+        prefix: `Paris/`
+        
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages`,
+        name: `src`,
+        path: `${__dirname}/src/`,
       },
     },
-    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
