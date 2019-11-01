@@ -4,13 +4,19 @@ import {graphql, useStaticQuery} from 'gatsby'
 import {Image, Video, Transformation, CloudinaryContext} from 'cloudinary-react';
 
 const Paris=()=> {
+    
     const data= useStaticQuery(graphql`
             query {
-                allCloudinaryMedia {
+                allCloudinaryMedia (
+                    filter: {
+                        tags: {
+                            eq: "paris"
+                        }
+                    }
+                ) {
                     edges {
                       node {
-                        id
-                        resource_type
+                        tags
                         url
                         public_id
                       }
@@ -18,6 +24,7 @@ const Paris=()=> {
                   }
             }
     `)
+    
 
     console.log(data)
 
@@ -28,6 +35,25 @@ const Paris=()=> {
         <Layout>
             <h2>About Paris</h2>
             <ul>
+            {data.allCloudinaryMedia.edges.map((edge)=>{
+                return (
+                    <li>
+                    <Image cloudName="martinez" publicId={edge.node.public_id}  raw_transformation="w_1000,ar_16:9,c_fill,g_auto,e_sharpen" />
+                        
+                    </li>
+                )
+            })}
+
+            </ul>
+            
+        </Layout>
+    )
+}
+
+export default Paris;
+
+/*
+ 
                 {data.allCloudinaryMedia.edges.map((edge)=>{
                     return (
                         <li>
@@ -36,9 +62,4 @@ const Paris=()=> {
                         </li>
                     )
                 })}
-            </ul>
-        </Layout>
-    )
-}
-
-export default Paris;
+                */
