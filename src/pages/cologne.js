@@ -36,8 +36,9 @@ const Cologne=()=> {
             {data.allCloudinaryMedia.edges.map((edge)=>{
                 return (
                     <li>
+                    <a href={edge.node.url}>
                     <Image cloudName="martinez" publicId={edge.node.public_id}  raw_transformation="w_1000,ar_16:9,c_fill,g_auto,e_sharpen" />
-                    
+                    </a>
                     </li>
                 )
             })}
