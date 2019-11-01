@@ -26,20 +26,18 @@ const Paris=()=> {
     `)
     
 
-    console.log(data)
-
     
 
     return (
         
         <Layout>
-            <h2>About Paris</h2>
+            <h2>PARIS</h2>
             <ul>
             {data.allCloudinaryMedia.edges.map((edge)=>{
                 return (
                     <li>
                     <Image cloudName="martinez" publicId={edge.node.public_id}  raw_transformation="w_1000,ar_16:9,c_fill,g_auto,e_sharpen" />
-                        
+                    
                     </li>
                 )
             })}
@@ -52,14 +50,4 @@ const Paris=()=> {
 
 export default Paris;
 
-/*
- 
-                {data.allCloudinaryMedia.edges.map((edge)=>{
-                    return (
-                        <li>
-                        <Image cloudName="martinez" publicId={edge.node.public_id}  raw_transformation="w_1000,ar_16:9,c_fill,g_auto,e_sharpen" />
-                            
-                        </li>
-                    )
-                })}
-                */
+
