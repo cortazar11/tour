@@ -11,7 +11,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: ['gatsby-source-cloudinary'],
+      resolve: ['gatsby-source-cloud'],
       options:{
       cloudName: `martinez`,
       apiKey: `376187389972773`,
