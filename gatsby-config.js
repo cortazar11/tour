@@ -11,15 +11,15 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve:`gatsby-source-cloudinary`,
+      resolve: ['gatsby-source-cloudinary'],
       options:{
-      cloudName: 'martinez',
-      apiKey: '376187389972773',
-      apiSecret: 'q5zNkqA2cByuhhVzL-g8qLuFbUY',
-      resourceType: 'image',
-      type: `upload`,
-      maxResults: 500,
-      tags: true
+      cloudName: `martinez`,
+      apiKey: `376187389972773`,
+      apiSecret: `q5zNkqA2cByuhhVzL-g8qLuFbUY`,
+      resourceType: `image`,
+      maxResults: 100,
+      tags: true,
+      context: true
       
       }
     },

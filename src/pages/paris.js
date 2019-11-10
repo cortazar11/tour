@@ -11,14 +11,19 @@ const Paris=()=> {
                     filter: {
                         tags: {
                             eq: "paris"
-                        }
+                        } 
                     }
                 ) {
                     edges {
                       node {
+                        public_id
                         tags
                         url
-                        public_id
+                        context {
+                          custom {
+                            caption
+                          }
+                        }
                       }
                     }
                   }
@@ -26,7 +31,7 @@ const Paris=()=> {
     `)
     
 
-    
+    console.log(`data: ${JSON.stringify(data)}`)
 
     return (
         
@@ -38,9 +43,11 @@ const Paris=()=> {
                     <li>
                         <a href={
                             edge.node.url
-                        }><Image cloudName="martinez" publicId={edge.node.public_id}  raw_transformation="w_1000,ar_16:9,c_fill,g_auto,e_sharpen" />
+                        }>
+                            <Image cloudName="martinez" publicId={edge.node.public_id}  raw_transformation="w_1000,ar_16:9,c_fill,g_auto,e_sharpen" />
+                            <figcaption>{edge.node.context.custom.caption}</figcaption>
                         </a>
-                    
+                        
                     </li>
                 )
             })}
