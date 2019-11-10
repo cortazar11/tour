@@ -1,5 +1,4 @@
 const {newCloudinary, getResourceOptions} = require('./utils');
-const cloudinary=require('cloudinary')
 const type = `CloudinaryMedia`;
 
 const getNodeData = (gatsby, media) => {
