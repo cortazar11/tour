@@ -14,8 +14,8 @@ module.exports = {
       resolve: ['gatsby-source-cloud'],
       options:{
       cloudName: `martinez`,
-      apiKey: `376187389972773`,
-      apiSecret: `q5zNkqA2cByuhhVzL-g8qLuFbUY`,
+      apiKey: process.env.API_KEY,
+      apiSecret: process.env.API_SECRET,
       resourceType: `image`,
       maxResults: 100,
       tags: true,
