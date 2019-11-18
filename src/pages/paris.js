@@ -43,10 +43,10 @@ const Paris=()=> {
                     <li>
                         <a href={
                             edge.node.url
-                        }>
-                            <Image cloudName="martinez" publicId={edge.node.public_id}  raw_transformation="w_1000,ar_16:9,c_fill,g_auto,e_sharpen" />
-                            <figcaption>{edge.node.context.custom.caption}</figcaption>
-                        </a>
+                        }><figure style={{marginBottom: '40px'}}>
+                            <Image style={{marginBottom: '0px'}} cloudName="martinez" publicId={edge.node.public_id}  raw_transformation="w_1000,ar_16:9,c_fill,g_auto,e_sharpen" />
+                            <figcaption style={{marginTop: '0px'}}>{edge.node.context.custom.caption}</figcaption>
+                        </figure></a>
                         
                     </li>
                 )
