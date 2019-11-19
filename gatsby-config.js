@@ -11,6 +11,15 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-openweathermap`,
+      options: {
+        apikey: 'a8389f2337045a00b5058984b7fcd88e',
+        location: 'York',
+        units: 'metric',
+        type: 'forecast'
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: ['gatsby-source-cloud'],
